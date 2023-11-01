@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		
+		#olivia{
+			width:100px;
+			height:100px;
+			background-color:lightblue;
+			position:absolute;
+			left:0px;
+			top:0px;
+			transition:0.5s;
+
+		}
+	</style>
+</head>
+<body>
+
+	<div id="olivia"></div>
+
+	<script type="text/javascript">
+
+		function sayHi(){
+			olivia.innerText = "hi olivia, good morning!"
+		}
+
+
+		document.addEventListener("click", function(event){
+			olivia.style.left = event.clientX +'px'
+			olivia.style.top = event.clientY +'px'
+
+
+		})
+		
+
+	</script>
+
+</body>
+</html>
