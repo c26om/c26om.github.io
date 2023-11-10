@@ -1,12 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100&display=swap" rel="stylesheet">
+	<style type="text/css">
+		
+	p {
 
+		color: lightskyblue;
+			font-family: 'Martian Mono', monospace; 
+	
+
+
+	}
+
+body{
+
+		background-color: black;
+	}
+
+
+
+</style>
 
 </head>
 <body>
-
-
+<center>
+<p>  <font size="+4"> <strong>
+cinnamon rolls
+<br>
+click to eat them 
+</strong>
+</font>
+</p>
+</center>
 <script type="text/javascript">
 
 	function makeCroll (){
@@ -17,12 +45,21 @@
 		food.style.backgroundSize="contain";
 		food.style.backgroundImage="url(croll.png)";
 		food.style.display="inline-block";
+		food.style.margin="10px"
+
+	food.addEventListener("click", function (){
+		food.style.width="100px";
+		food.style.height="100px";
+		food.style.backgroundImage="url(hidecroll.png)"
+
+
+	})
 
 
 
 	}
 
-	setInterval(makeCroll, 100)
+	setInterval(makeCroll, 300)
 
 
 
