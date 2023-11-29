@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> gratitude </title>
+<style type="text/css">
+		
+		#heart{
+			width:100px;
+			height:100px;
+			background-color:black;
+			background-image: url(heart.png);
+			background-size: contain;
+			position:relative;
+			position: absolute; 
+			left:0px;
+			top:0px;
+			transition:0s;
+
+		}
+
+
+body{
+
+		background-color: black;
+/*		background-image: url(hback.png);*/
+		margin: 0;
+	}
+
+	#picture{
+		width:600px;
+		height:600px;
+  		margin-top: 100px;		
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image:url(pic1.png);
+		position: relative;
+		background-position:center;
+
+	}
+	</style>
+
+</head>
+<body>
+
+
+
+	<!-- <div id="heart"></div> -->
+	<center>
+	<div id="picture"> </div>
+
+
+	</center>
+	<script type="text/javascript">
+
+var clicknumber =0;
+
+document.addEventListener('click', function (event) {
+	clicknumber = clicknumber+1;
+		console.log(clicknumber)
+
+var newHeart = document.createElement('div');
+      	document.body.appendChild(newHeart);
+
+    	newHeart.style.width = '100px';
+    	newHeart.style.height = '100px';
+     	// newHeart.style.backgroundColor = 'blue';
+     	newHeart.style.position = 'absolute';
+     	newHeart.style.backgroundSize = "contain"
+
+
+      	newHeart.style.left = event.clientX - 25 + 'px';
+      	newHeart.style.top = event.clientY - 25 + 'px';
+
+      	if (clicknumber ==1){
+      		 newHeart.style.backgroundImage="url(heart.png)"
+
+      	}
+      	if (clicknumber ==2){
+      		newHeart.style.backgroundImage="url(heart2.png)"
+      	}
+      	if (clicknumber==3){
+      		newHeart.style.backgroundImage="url(heart3.png)"
+      		clicknumber=clicknumber-3
+      	}
+
+
+
+
+    })
+
+picture.addEventListener('click', function (event) {
+	clickcounter = clickcounter+1;
+      	newPic.style.width='600px';
+      	newPic.style.height='600px';
+      	newPic.style.position='absolute';
+      	newPic.style.marginTop="100px"
+      	newPic.style.backgroundSize='contain'
+
+
+
+		if (clickcounter ==1){
+      		 picture.style.backgroundImage="url(pic1.png)"
+
+      	}
+      	if (clickcounter ==2){
+      		picture.style.backgroundImage="url(pic2.png)"
+      	}
+      	if (clickcounter==3){
+      		picture.style.backgroundImage="url(pic3.png)"
+      	}
+		if (clickcounter ==4){
+      		 picture.style.backgroundImage="url(pic4.png)"
+
+      	}
+      	if (clickcounter ==5){
+      		picture.style.backgroundImage="url(pic5.png)"
+      	}
+      	if (clickcounter==6){
+      		picture.style.backgroundImage="url(pic6.png)"
+      	}
+      	if (clickcounter ==7){
+      		 picture.style.backgroundImage="url(pic8.png)"
+
+      	}
+      	if (clickcounter ==8){
+      		picture.style.backgroundImage="url(pic8.png)"
+      	}
+      	if (clickcounter==9){
+      		picture.style.backgroundImage="url(pic9.png)"
+      	}
+      	if (clickcounter ==10){
+      		picture.style.backgroundImage="url(pic10.png)"
+      	}
+      	if (clickcounter==11){
+      		picture.style.backgroundImage="url(pic11.png)"
+      		clickcounter=clickcounter-11
+      	}
+
+})
+
+
+	</script>
+
+</body>
+</html>
