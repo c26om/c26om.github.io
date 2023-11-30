@@ -23,35 +23,72 @@
 body{
 
 		background-color: black;
-/*		background-image: url(hback.png);*/
 		margin: 0;
 	}
 
 	#picture{
-		width:600px;
-		height:600px;
-  		margin-top: 100px;		
+		width:650px;
+		height:650px;
+  		margin-top: 50px;		
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image:url(pic1.png);
+		background-color: black;
 		position: relative;
 		background-position:center;
+		float: left;
 
 	}
+	p {
+
+		color: lightskyblue;
+			font-family: 'Martian Mono', monospace;
+	
+
+
+	}
+
+	#button{
+	background-color: lightskyblue; 
+    width: 150 px;
+    height: 50px;
+    font-size: 14px; 
+    cursor: pointer; 
+}
 	</style>
+
 
 </head>
 <body>
 
 
 
-	<!-- <div id="heart"></div> -->
 	<center>
 	<div id="picture"> </div>
 
-
 	</center>
+	<p>to remi</p>
+
+    <button id="button" onclick="buttonFunction()">click here</button>
+
+<p id="hiddenText" style="display:none;">
+<br>
+<br>
+
+hi twin i love u and appreciate you so much
+<br>
+click around to place hearts<br>
+press the space bar to show pictures
+</p>
+
 	<script type="text/javascript">
+
+function buttonFunction(){
+		var hiddenText = document.getElementById("hiddenText");
+        hiddenText.style.display = "block";
+
+
+}
+
 
 var clicknumber =0;
 
@@ -89,56 +126,63 @@ var newHeart = document.createElement('div');
 
     })
 
-picture.addEventListener('click', function (event) {
-	clickcounter = clickcounter+1;
-      	newPic.style.width='600px';
-      	newPic.style.height='600px';
-      	newPic.style.position='absolute';
-      	newPic.style.marginTop="100px"
-      	newPic.style.backgroundSize='contain'
+let clickcounter = 0;
+
+document.addEventListener('keydown', function (event) {
+    if (event.code === 'Space') {
+        clickcounter = clickcounter + 1;
+        console.log(clickcounter);
+
+        picture.style.width = '650px';
+        picture.style.height = '650px';
+        picture.style.position = 'relative';
+        picture.style.marginTop = '50px';
+        picture.style.backgroundSize = 'contain';
+        picture.backgroundPosition='center'
 
 
+        if (clickcounter === 1) {
+            picture.style.backgroundImage = 'url(pic1.png)';
+        }
+        if (clickcounter === 2) {
+            picture.style.backgroundImage = 'url(pic2.png)';
+        }
+        if (clickcounter === 3) {
+        	picture.style.backgroundImage = 'url(pic4.png)';
 
-		if (clickcounter ==1){
-      		 picture.style.backgroundImage="url(pic1.png)"
+        }
+        if (clickcounter === 4) {
+        	picture.style.backgroundImage = 'url(pic5.png)';
 
-      	}
-      	if (clickcounter ==2){
-      		picture.style.backgroundImage="url(pic2.png)"
-      	}
-      	if (clickcounter==3){
-      		picture.style.backgroundImage="url(pic3.png)"
-      	}
-		if (clickcounter ==4){
-      		 picture.style.backgroundImage="url(pic4.png)"
+        }
+        if (clickcounter === 5) {
+        	picture.style.backgroundImage = 'url(pic6.png)';
 
-      	}
-      	if (clickcounter ==5){
-      		picture.style.backgroundImage="url(pic5.png)"
-      	}
-      	if (clickcounter==6){
-      		picture.style.backgroundImage="url(pic6.png)"
-      	}
-      	if (clickcounter ==7){
-      		 picture.style.backgroundImage="url(pic8.png)"
+        }
+        if (clickcounter === 6) {
+        	picture.style.backgroundImage = 'url(pic7.png)';
 
-      	}
-      	if (clickcounter ==8){
-      		picture.style.backgroundImage="url(pic8.png)"
-      	}
-      	if (clickcounter==9){
-      		picture.style.backgroundImage="url(pic9.png)"
-      	}
-      	if (clickcounter ==10){
-      		picture.style.backgroundImage="url(pic10.png)"
-      	}
-      	if (clickcounter==11){
-      		picture.style.backgroundImage="url(pic11.png)"
-      		clickcounter=clickcounter-11
-      	}
+        }
+        if (clickcounter === 7) {
+        	picture.style.backgroundImage = 'url(pic8.png)';
 
+        }
+        if (clickcounter === 8) {
+        	picture.style.backgroundImage = 'url(pic9.png)';
+
+        }
+        if (clickcounter === 9) {
+        	picture.style.backgroundImage = 'url(pic10.png)';
+
+        }
+        if (clickcounter === 10) {
+        	picture.style.backgroundImage = 'url(pic11.png)';
+        	clickcounter = clickcounter - 10;
+
+        }
+
+    }
 })
-
 
 	</script>
 
