@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+
+  <style type="text/css">
+    body {
+      background-image: url(https://i.pinimg.com/736x/38/de/b6/38deb6dac81c8f47fb80c26d3e892efd.jpg);
+      background-size: cover;
+    }
+
+#text{
+
+		color: gray;
+	    font-size: 20px; 
+		font-family: 'Manrope', sans-serif;	
+		top:25px;
+		position: absolute;
+        left: 45%;
+
+		}
+
+    .snowflake {
+      width: 75px;
+      height: 75px;
+      background-color: transparent;
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      overflow: hidden;
+    }
+
+    @keyframes falling {
+      0% {
+        top: -200px;
+      }
+
+      100% {
+        top: 1000px;
+        rotate: 200deg;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function randomLeft() {
+      return Math.floor(Math.random() * (window.innerWidth - 75)) + 'px';
+    }
+
+    function randomRotation() {
+      return Math.floor(Math.random() * 360) + 'deg';
+    }
+
+    var snowflakes = [];
+    var snowflakeImages = ['sf1.png', 'sf2.png', 'sf3.png', 'sf4.png']; 
+
+    function startSnowfall() {
+      for (var i = 0; i < 20; i++) {
+        var snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.style.left = randomLeft();
+        snowflake.style.transform = 'rotate(' + randomRotation() + ')';
+        
+        var randomImageIndex = Math.floor(Math.random() * snowflakeImages.length);
+        snowflake.style.backgroundImage = 'url(' + snowflakeImages[randomImageIndex] + ')';
+        
+        document.body.appendChild(snowflake);
+        snowflakes.push(snowflake);
+
+        snowflake.style.animation = 'falling 3s infinite';
+        snowflake.style.animationDelay = (Math.random() * 5) + 's';
+      }
+    }
+
+    document.body.addEventListener('keydown', startSnowfall);
+  </script>
+
+  <div id = "text"> press space to make it snow</div>
+</body>
+</html>
