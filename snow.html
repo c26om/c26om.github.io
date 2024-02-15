@@ -27,7 +27,8 @@
     .snowflake {
       width: 75px;
       height: 75px;
-      background-color: transparent;
+/*      background-color:purple;*/
+/*      background-color: transparent;*/
       background-size: cover;
       background-position: center;
       position: absolute;
@@ -56,11 +57,14 @@
     function randomRotation() {
       return Math.floor(Math.random() * 360) + 'deg';
     }
+    console.log(randomRotation())
+
 
     var snowflakes = [];
     var snowflakeImages = ['sf1.png', 'sf2.png', 'sf3.png', 'sf4.png']; 
+    console.log(snowflakeImages.length)
 
-    function startSnowfall() {
+    function startSnowfall() {``
       for (var i = 0; i < 20; i++) {
         var snowflake = document.createElement('div');
         snowflake.className = 'snowflake';
@@ -72,6 +76,7 @@
         
         document.body.appendChild(snowflake);
         snowflakes.push(snowflake);
+      console.log (snowflakes)
 
         snowflake.style.animation = 'falling 3s infinite';
         snowflake.style.animationDelay = (Math.random() * 5) + 's';

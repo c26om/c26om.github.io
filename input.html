@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+<style type="text/css">
+#answer{
+		color: dodgerblue;
+	    font-size: 50px; 
+		font-family: 'Manrope', sans-serif;	
+		background-color: ghostwhite;
+		}
+#button{
+		color: dodgerblue;
+	    font-size: 20px; 
+		font-family: 'Manrope', sans-serif;
+
+		}		
+
+	body{
+      background-image: url(https://i.pinimg.com/originals/de/93/00/de9300895efbcd083941bc3ebf1f4e18.jpg);
+      background-size: cover;
+	}
+p{
+		color: dodgerblue;
+	    font-size: 30px; 
+		font-family: 'Manrope', sans-serif;	
+	background-color:white;
+
+}
+	
+</style>
+
+</head>
+<body>
+<p><b>whats the percent chance that i will pass chemistry?
+</b></p>
+<input id="enter">
+</input>
+<button id="button">submit</button>
+<div id="answer"></div>
+
+<script type="text/javascript">
+	button.addEventListener("click", function(){
+		console.log(enter.value)
+		if (enter.value =="0"){
+answer.innerText="now you're just being rude"
+		}
+		if (enter.value > 80){
+answer.innerText="i appreciate your confidence in me"
+		}
+		if (enter.value < 20){
+answer.innerText="wow i see how it is"
+		}
+	})
+
+</script>
+
+</body>
+</html>
