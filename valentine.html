@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+<style type="text/css">
+	
+	body{
+background-image: url('carpet.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+	}
+
+#bed{
+width: 700px;
+height: 400px;
+background-image: url('bed.png');
+background-size: cover;
+position: absolute;
+top: 350px; 
+left: 550px;
+}
+
+#tipi{
+width: 500px;
+height: 550px;
+background-image: url('tipi.png');
+background-size: cover;
+position: absolute;
+top: 100px; 
+left: 50px;
+}
+#dog{
+width:400px;
+height:400px;
+background-image:url(dog.png);
+background-size:cover;
+position:relative;
+	 	
+	 	}
+
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+		var left =0;
+		var up =0;
+
+		document.addEventListener("keypress", function(event){
+				
+				if (event.key=="d")
+					{
+					left = left +20;
+					console.log (left);
+					dog.style.left = left + "px";
+					
+				}
+
+				if (event.key=="a")
+					{
+					left = left -20;
+					console.log (left);
+					dog.style.left = left + "px";
+					dog.style.backgroundImage = "url(dog.png)"
+
+
+				}
+
+				if (event.key=="w")
+					{
+					up = up -20;
+					console.log (up);
+					dog.style.top = up + "px";
+					dog.style.backgroundImage = "url(w.png)"
+				}
+
+				if (event.key=="s")
+					{
+					up = up +20;
+					console.log (up);
+					dog.style.top = up + "px";
+					dog.style.backgroundImage = "url(dog.png)"
+
+				}
+		})
+
+	</script>
+
+<div id="bed"></div>
+<div id=tipi></div>
+<div id="dog"></div>
+
+</body>
+</html>
