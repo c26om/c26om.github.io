@@ -2,12 +2,11 @@
 <html>
 <head>
   <title></title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
 
 
   <style type="text/css">
+@font-face { font-family: handwriting; src: url('handwriting.ttf'); } 
+
     body {
       background-image: url(https://i.pinimg.com/736x/38/de/b6/38deb6dac81c8f47fb80c26d3e892efd.jpg);
       background-size: cover;
@@ -16,8 +15,8 @@
 #text{
 
 		color: gray;
-	    font-size: 20px; 
-		font-family: 'Manrope', sans-serif;	
+	    font-size: 70px; 
+		font-family: 'handwriting', sans-serif;	
 		top:25px;
 		position: absolute;
         left: 45%;
@@ -64,7 +63,7 @@
     var snowflakeImages = ['sf1.png', 'sf2.png', 'sf3.png', 'sf4.png']; 
     console.log(snowflakeImages.length)
 
-    function startSnowfall() {``
+    function startSnowfall() {
       for (var i = 0; i < 20; i++) {
         var snowflake = document.createElement('div');
         snowflake.className = 'snowflake';
@@ -76,7 +75,7 @@
         
         document.body.appendChild(snowflake);
         snowflakes.push(snowflake);
-      console.log (snowflakes)
+      console.log(snowflakes)
 
         snowflake.style.animation = 'falling 3s infinite';
         snowflake.style.animationDelay = (Math.random() * 5) + 's';
