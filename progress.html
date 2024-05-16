@@ -12,6 +12,16 @@
       margin: 0;
       padding: 0;
       font-size: 35px;
+      background-color: lavender;
+    }
+
+    p{
+      font-family: handwriting, monospace;
+      margin: 10px;
+      padding: 0;
+      font-size: 45px;
+      background-color: lavender;
+ 
     }
 
     #picture {
@@ -20,7 +30,7 @@
       margin-top: 50px;
       background-size: contain;
       background-repeat: no-repeat;
-      background-color: white;
+      background-color: lavender;
       position: relative;
       background-position: center;
       margin-right: 20px;
@@ -52,7 +62,7 @@ a:link {
   color: black;
 }
 a:hover {
-  color: white;
+  color: lavender;
 }
 
 
@@ -64,7 +74,13 @@ a:hover {
 
   <center>
 
-<h1>press space</h1>
+<p>Olivia Meyer Volleyball Profile
+<br>
+NYC Volleyball Academy 16 Broadway
+<br>
+Libero/DS<br>
+#2/#4
+</p>
     <div id="picture">
       <div class="caption"></div>
     </div>
@@ -88,23 +104,23 @@ a:hover {
 
           if (clickcounter === 1) {
             picture.style.backgroundImage = 'url(vbpic1.png)';
-            caption.textContent = 'sixth grade playing 12s, the first year i played volleyball.';
+            caption.textContent = 'NYC Juniors 12 Travel, the first year I played volleyball';
           }
           if (clickcounter === 2) {
-            picture.style.backgroundImage = 'url(vbpic2.png)';
-            caption.textContent = 'playing 14s in eighth grade';
+            picture.style.backgroundImage = 'url(12s.png)';
+            caption.textContent = 'NYC Juniors 14 Travel. Second year playing';
           }
           if (clickcounter === 3) {
             picture.style.backgroundImage = 'url(vbpic3.png)';
-            caption.textContent = 'this was my varsity team freshman year during our Dig Pink game';
+            caption.textContent = 'GCDS Varsity Volleyball, Dig Pink game, Freshman Year';
           }
           if (clickcounter === 4) {
             picture.style.backgroundImage = 'url(vbpic5.png)';
-            caption.textContent = '15s at nationals last year.';
+            caption.textContent = 'Evergreen Volleyball Academy 15 Elite at AAU Nationals';
           }
           if (clickcounter === 5) {
           picture.style.backgroundImage = 'url(vbpic4.png)';
-          caption.textContent="sophomore year, Dalton varsity team."
+          caption.textContent="Dalton Varsity Volleyball, Homecoming, sophomore year"
           clickcounter = clickcounter - 5;
 
 
