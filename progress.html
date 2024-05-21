@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style type="text/css">
-    @font-face {
-      font-family: handwriting;
-      src: url('handwriting.ttf');
-    }
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <style type="text/css">
+ 
     body {
-      font-family: handwriting, monospace;
-      margin: 0;
-      padding: 0;
-      font-size: 35px;
+      font-family: inter, monospace;
+      margin: 20px;
+      padding: 10px;
+      font-size: 20px;
       background-color: lavender;
     }
 
     p{
-      font-family: handwriting, monospace;
+      font-family: inter, monospace;
       margin: 10px;
       padding: 0;
-      font-size: 45px;
+      font-size: 30px;
       background-color: lavender;
  
     }
@@ -43,7 +43,7 @@
       bottom: -30px;
       left: 20px;
       color: black;
-      font-size: 35px;
+      font-size: 20px;
     }
 
     .button{
@@ -121,10 +121,14 @@ Libero/DS<br>
           if (clickcounter === 5) {
           picture.style.backgroundImage = 'url(vbpic4.png)';
           caption.textContent="Dalton Varsity Volleyball, Homecoming, sophomore year"
-          clickcounter = clickcounter - 5;
-
+        }
+          if (clickcounter === 6) {
+          picture.style.backgroundImage = 'url(16s.png)';
+          caption.textContent="NYC VBA 16 Broadway"
+          clickcounter = clickcounter - 6;
 
         }
+
         }
       });
     </script>
